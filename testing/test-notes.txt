@@ -1,0 +1,317 @@
+What is Code Quality?
+    a. Is Code Maintainable?
+        1. Can you maintain the code?
+        2. Cna someone else maintain it without help?
+        3. Can someone else read and understand design and intent?
+
+    b. Determing Code Quality
+        1. Peer Review
+        2. Identify Design and intent
+        3. Consistent FOrmatting and Logical Naming
+        4. Clear Comments and Functional Docs
+        5. Modular Components
+
+    Functional, Maintainable, and Useful
+
+What is a Coding Standard?
+    a. What is a coding convention?
+        1. Guidelines
+        2. Programming Style - Code Readability
+        3. Practices - How to build and architect
+        4. Methods = How to plan and implement
+    b. What is a coding standard?
+        1. Collection of coding conventions
+        2. Designed to produce quality code
+    
+Programming Style Conventions
+    a. Comments
+        1. Documentation of methods and functions
+        2. Existence, Validity
+        3. Multi-Line Comments
+        4. Spacing // Comment
+    b. Whitespace
+        1. Spaces or Tabs
+        2. Line Length - 100 Characters
+        3. Sequential mepty Lines
+        4. Line Endings \n, \r\n, \r
+        5. Block Statements
+        6. Control Statements
+    c. Naming
+        1. Capitalizations of Identifiers and properties
+        2. Data types and Constructors - Pascal
+        3. Methods use lowerCamelCase
+        4. Length
+        5. Meaningful
+    d. Possible Errors
+        1. Double Semi-colons
+        2. throw -> exeuction
+        3. typeof dog === 'string'
+
+How do you create and enforce a coding standard?
+    a. Determine Coding conventions
+    b. Decide positive impact
+    c. Briefly document
+    d. Create documentation
+    e. Involve the whole team
+    f. Goal is gradual improvement
+    g. Pitfalls
+        1. Too many rules
+        2. Too strict
+        3. Overly pedantic rules
+    h. Use a Linter
+        1. Scans code to check for errors.
+        2. Performs static analysis
+        3. Can be configured
+        4. Fast, Accurate, Consistent, Impersonal, Auto-Fix
+        5. Linter Reports - Affected Location, Severity, Description
+    i. Peer Reviews
+        1. Lint Before Peer Review
+        2. Cover logic and intent
+
+How to test software?
+    a. Unit Testing
+        1. Smallest testable part of an application
+        2. Module or a functions
+        3. Interface or a methods
+        4. Tests an isolated unit via API
+        5. Performed in memory - no permanent changes
+        6. Safe to run repeatedly
+        7. Fast exeuction8.
+        8. Assertion - Validate correctness
+        9. Assertion Methods
+            - ok = truth
+            - equal = shallow equality
+            - deepEqual = shallow equality of all properties
+            - strictEqual = strict equality and no implicit conversion
+            - throws = thrown error
+            - notEqual = not equal
+        10. Dependencies - simulate dependencies
+            - database
+            - api endpoint
+    b. Integration Testing
+        1. Builds on Unit Tests - Combines and tests resulting combinations
+            - APIs, UIs, and results
+        2. One system or cross-systems
+        3. Uses full or partial environment
+            - Databases and services
+        4. More complex and harder to maintain
+    c. Functional Testing
+        1. Focus on result, not code
+        2. Check a specific feature
+        3. Typically automated
+        4. Slower than unit and Integration
+    d. System Testing
+        1. Complete System 
+            - Application and environment
+        2. Find Defects
+        3. Performance
+            - Stress and Load
+        4. Security Scans
+        5. Usability and UX
+        6. Compatibility
+    e. Regression Testing
+        1. Software Bug
+    
+How do I automate tests?
+    a. What is Test Automation?
+        1. Separates software from applicaiton
+        2. Controls test exeuction
+            - Ordering
+            - Filtering
+        3. Avoids repetitive tasks
+    b. What does a Testing Framework do?
+        1. Define how assertions are defined
+        2. Control and itneract with tested application
+        3. Execute Tests
+        4. Report results
+            - Individual
+            - Aggregate
+    c. What does a TEsting Framework provide?
+        1. Responsibility
+        2. Focus on writing tests
+    d. Test Framework Concepts
+        1. Test
+            - What
+        2. Results
+            - Collection
+            - Reporting
+    e. Test Framework Tools
+        1. Environment Setup
+        2. Application Control
+        3. Test Data
+        4. Execution Control
+    f. Why use a testing framework?
+        1. Lower Maintenace Cost
+        2. Update tests, not frameowrk
+        3. Reusability
+        4. Delegate Responsibility
+    g. Test Phases in Framework
+        1. Setup
+            - Prepare Application
+            - Replace Dependencies
+            - Prepare Test Data
+        2. Execution
+            - Perform target behavior
+            - Capture output
+        3. Validation
+            - Ensure results are correct
+            - Assertions use result
+            - Reports successes and failures
+        4. Clean-Up
+            - Restore state
+    h. NodeJs Testing Frameworks
+        1. Mocha
+        2. Jasmine
+        3. Jest
+
+What is Test Driven Development?
+    a. Software Development Process
+        1. Requirements turned into test cases
+        2. Software improved until tests pass 
+        3. Tests are rerun
+    b. Terminology is about testing
+    c. Something works or doesn'targetd.
+    d. Literal
+    e. Outline
+        1. GIVEN some initial context
+        2. WHEN an event occurs
+        3. THEN ensure some outcomes
+    f. What is Behavior Driven Development?
+        1. Behavior - Describes why and What
+        2. Descibe/context
+        3. specify/it
+        4. before/after
+            1. Setup and teardown    
+
+Assertion Libraries
+    a. Collection of assertions
+    b. Provide APIs to create predicates
+    c. Assertions
+        1. Exists
+        2. typeof
+        3. instanceOf
+        4. propertyByPath
+        5. finally
+    d. Language Chaining
+        1. Special kind of assertions
+        2. Passes value between assertions
+        3. Multiple Aliases
+            - be, an, of, a, and, been, have, has
+    e. Libraries
+        1. Assert - TDD, 14 Assertions
+        2. Chai -TDD and BDD, 100 Assertions, Language Chaining
+        3. Should - BDD, 100 Assertions, Language Chaining, Promises
+        4. Code - BDD, 40 Assertions, Language Chaining
+
+Linters
+    a. JSLint
+    b. JSHint
+    c. ESLint
+        
+Stubs, Spies, and Mocks
+    a. Test Doubles
+        1. Replacement for a Components
+        2. Looks and behaves similarly
+        3. Simplified Version
+        4. Hard-Coded behavior
+        5. Configured during set-up
+        6. Isolation
+        7. Consistency
+    b. Stubs
+        1. Simulates behavior and controls responses
+        2. Won't respond unless programmed to
+        3. Verifies indirect inputs
+        4. Example: Faking database query response, disable logging
+        5. Process
+            - Replicate how: return, throw, resolve, and/or reject
+            - Replicate what: match structure
+    c. Spy
+        1. Observes interactions
+        2. Observes number of times code is called
+        3. Observes how it was called
+        4. Observes what it responded with
+        5. Example: If validator was called once with transformed values
+        6. Process
+            - Check call numbers
+            - Check parameters
+    d. Mock Object
+        1. Pre-programmed - Control how unit is being used
+        2. Verifies behavior around how something is called
+        3. Does not return anything
+        4. Example: Saving only calls the database once
+        5. Tests how many times called and with what arguments
+        6. Process
+            - Ensure database is only called once
+    e. Fake Object
+        1. Working implementation that takes a shortcut
+        2. Only used for testing purposes
+        3. Example: Replace database with an in-memory array
+    f. Dummy Object
+        1. Provides parameter for tested methods
+        2. Example: testing reservation validation with arbitrary input
+
+Sinon
+    a. Library for test spies, stubs and mocks
+    b. Unit testing framework agnostic
+    c. Fake XML and times
+    d. Sinon-Chai - improves readability
+
+Override Dependencies with a Library
+    a. Require override API
+    b. Before Test
+        1. Use override API to define what and how
+        2. Require target module using override API
+    c. Test Executes
+    d. After Test
+        1. Disable override
+    f. Libraries
+        1. Mockery
+            - Easiest
+        2. Proxyquire
+            - Technical and granular
+        3. Rewire
+            - Override and Inspect
+            - Doesn't support ES6
+
+Testing Exported Named functions
+    a. When testing a named function in the same file, use module.exports.FUNCTIONAME
+
+Test Coverage
+    a. Measure of how much code is executed, typeically from a test suite.
+    b. Reported in percentages
+    c. Higher Coverage reduces risk of bugs
+    d. Highlights unuseed or untested pieces of code
+    e. Indicator of code quality
+    f. Requirement in some industries
+    g. Types of Coverage
+        1. Statements
+            - Performs an action, may span multiple lines
+        2. Branches
+            - Each statement in a conditional
+        3. Functions
+        4. Lines
+
+Measure Code Coverage
+    a. Blanket
+    b. JSCoverage
+    c. Istanbul
+        1. Watches code exeuction
+        2. CLI is nyc
+        3. Supports mocha, ava, es6, babel and others
+        4. Reporters
+            - Text
+            - HTML
+            - LCOV - Standard
+        5. using
+            - Add nyc to dev dependencies
+            - add coverage to package.json
+            - Specifiy debug environmental variable
+            - Execute nyc
+            - Specifiy Reports
+            - --reporter=text --reporter=html
+            - give test runner as an argument
+
+Functional Testing
+    a. PhantomJS/CasperJS
+    b. Selenium Web Driver/NightwatchJS/WebDriveIO
+    c. SuperAgent/ChaiHTTP
