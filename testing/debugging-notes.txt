@@ -1,0 +1,145 @@
+Logging
+    1. Why Log?
+        - Diagnostics of Application Health
+        - Debugging to determine what and when
+        - Analysis of traffic, activity
+    2. Useful things to Log
+        - Staus of operation
+        - What was requested and how
+        - Who made the request
+        - How long did request take
+        - Identifiers
+        - Successes - Positive Indicator
+    3. Avoid Logging
+        - Personally Identifiable Information
+        - POST Contents
+        - Sensitive Information
+        - Stack Traces
+    4. How
+        - Send to file
+        - Redirect with a process manager
+    5. Custom Express Error Pages
+        - Control User Experience
+        - Themed Error Pages
+        - 404 Call to Action
+    6. Log Levels: Syslog Severities
+        - 7 Debug
+        - 6 Informational
+        - 5 Notice
+        - 4 Warning
+        - 3 Error
+        - 2 Critical
+        - 1 Alert
+        - 0 Emergency
+    7. Logging Libraries
+        - Formatting
+        - Severity
+        - Performance
+        - Routing
+        - Options
+            - Bunyan
+            - Debug
+            - Log4js
+            - Pino
+            - Winston
+    8. Adding a Logger
+        - Create a shared logging library
+    9. Cross Application Request Correlation
+        - Set Request X Header
+        - Drawbacks
+            - Laborious to implement
+    10. Debugging
+        - Locating Bugs
+            - Splitting/Binary Search
+            - Hypothesize
+            - Rubber Ducking
+        - Debugger Stepping
+            - Pause
+            - Continue
+            - Step Next
+            - Step In
+            - Step Out
+        - NodeJS Debugger
+            - Out of Process Debugging Utility
+            - Controls and inspects a Node process
+        - Node Inspect
+            - stop web in PM2
+            - --inspect, --inspect=[host:port]
+            - node inspect file.js
+            - cont, Continue
+            - repl, check variables
+            - .exit, leaves debugger
+        - Chrome Dev Tools
+            - stop web in PM2
+            - start file with --inspect-brk
+            - start file with --inspect
+            - chrome://inspect
+        - Visual Studio Code Debugger
+            - Stop web in PM2
+            - Edit launch configuration
+            - Start debugging
+        - Notes
+            - Never use a debugger in production
+    11. Measuring Performance
+        - Execution Times
+        - External Measuring (HTTP)
+        - Internal Measuring (Code)
+        - Benchmarking Performance, measurement of time needed to complete an operation
+            - Operations, server response time, function call, database queries
+            - HTTP (external)
+                - No code modification
+                - Execute tool with configuration
+                - Measure granular response Times
+                - Can simulate server load
+                - Tools
+                    - ab, Apache AB server
+                    - httperf
+                    - wrk
+            - Code (internal)
+                - Requires code modification
+                - Example, placing time
+                - Example, report that measures specific functions
+                - Tools
+                    - Node Console, time/timeEnd
+                    - Winston, timer
+                    - Debug
+            - Apache Bench
+                - Report, complete and failed requests
+                - Bytes transferred
+                - Requests per second
+                - Manually download Apache Bench
+                - Usage
+                    - Downlaod Apache Bench
+                    - within Apache/bin run:
+                        - ab -n number -c concurrency url/
+                    - 
+                - Results
+                    - Average Times
+                    - Session and Player was creatd for every new request
+                    - Should session and player creation be automatic?
+            - Winston
+                - Timer
+                    - const timer = logger.startTimer()
+                    - timer.done("MESSAGE")
+            - Node Profiler
+                - Usage
+                    - pm2 stop web
+                    - Node --prof target
+                    - Log file generated in current directory
+                    - node --prof-process log file > profiler.txt
+    12. Knowing what to optimize
+        - Measure Performance, Record Results, and Compare
+        - Confirm everything is up to date
+        - Only require necessary modules
+        - Evaluate modules you are using
+        - npm-check, outdated, incorrect or unused
+        - Avoid boilerplates
+        - Handle all exceptions
+        - Micro-Optimizations
+        - Implement major functionality and address outliers
+        - Measure first and then fix what you needed
+        - Caching
+            - Storing/Retrieveing Data
+            - Stored with expiration time, TTL - Time to Live
+            - Invalidation, entry is removed or replaced
+            - Back and Front End Caching
