@@ -60,7 +60,7 @@ Model-View-Presenter Pattern
     3. Presenters - Logic
     4. View has no access to model, view passes through presenter to model
 
-Model-View-ViewModel/Model-View-ViewControlls Pattern
+Model-View-ViewModel/Model-View-ViewControllers Pattern
     1. Models - Data
     2. View - Stateless
     3. ViewModel - Logic and State of Data
