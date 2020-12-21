@@ -4,7 +4,7 @@
 //Requiring HTTP
 const http = require("http");
 
-console.log(http); // HTTTP module
+console.log(http); // HTTP module
 console.log(http.STATUS_CODES); //HTTP status codes
 console.log(http.METHODS); //HTTP methods
 
