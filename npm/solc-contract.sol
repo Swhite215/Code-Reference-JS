@@ -20,10 +20,10 @@ contract ExampleContract {
         emit SayHello(msg.sender);
     }
 
-        function SayGoodbye() payable public{
+    function sayGoodbye() payable public{
         require(msg.sender == creator);
 
-        emit SayGoodbye(msg.creator);
+        emit SayGoodbye(creator);
     }
 
 }
