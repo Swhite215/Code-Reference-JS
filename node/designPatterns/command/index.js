@@ -7,7 +7,7 @@ var rl = createInterface({
     output: process.stdout
 });
 
-console.log("create <fileName> <text> | history | undo | redo | exit");
+console.log("create <fileName> <text> | delete | history | undo | redo | exit");
 rl.prompt();
 
 rl.on("line", input => {
