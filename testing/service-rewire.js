@@ -5,7 +5,7 @@ const should = chai.should();
 const assert = chai.assert;
 const rewire = require("rewire");
 
-const somerService = rewire("../services/some-services"); // Use rewire to change behavior of methods called within other methods
+const someService = rewire("../services/some-services"); // Use rewire to change behavior of methods called within other methods
 const sinon = require("sinon");
 
 // Dealing with a method that uses another method from same file
