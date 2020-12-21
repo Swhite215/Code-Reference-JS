@@ -94,7 +94,7 @@ app.delete('/nest', deleteNest);
 app.get('/events', eventsHandler);
 app.get('/status', (req, res) => res.json({clients: clients.length}));
 
-const PORT = 3000;
+const PORT = 3333;
 
 let clients = [];
 let nests = [];
