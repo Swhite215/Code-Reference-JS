@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 
-const apiRoutes = require("./routes/routes");
+const controllerOneRoutes = require("./routes-set-two");
 const app = express();
 
 //Middlware - Body Parser
@@ -28,7 +28,7 @@ app.use('/example', (req, res, next) => {
 });
 
 //Routing - Example Routes File
-app.use('/api', apiRoutes);
+app.use('/api/controllerOne', controllerOneRoutes);
 
 //Routing - Catch All Error Path
 app.post('/', (req, res, next) => {
