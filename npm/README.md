@@ -17,6 +17,7 @@
 ###### &nbsp;&nbsp;&nbsp;&nbsp; [joi]()
 ###### &nbsp;&nbsp;&nbsp;&nbsp; [jrasign]()
 ###### &nbsp;&nbsp;&nbsp;&nbsp; [js-sha256]()
+###### &nbsp;&nbsp;&nbsp;&nbsp; [log-update]()
 ###### &nbsp;&nbsp;&nbsp;&nbsp; [lodash]()
 ###### &nbsp;&nbsp;&nbsp;&nbsp; [material-ui]()
 ###### &nbsp;&nbsp;&nbsp;&nbsp; [mongodb]()
