@@ -1,9 +1,5 @@
 # Code-Reference-JS
-Topics:
-    - Testing
-    - TypeScript
-    - Node
-    - NPM Packages
+Topics: JavaScript, Node.js, Mocha, Chai, Typescript
 # Objective
 To provide reference materials for working with JavaScript
 
