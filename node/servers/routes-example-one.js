@@ -21,7 +21,7 @@ var swagger = require("swagger-express");
 app.use(swagger.init(app, config.get("swagger")));
 
 //Set up handling of various routes
-app.use("/", require("./routes"));
+app.use("/", require("./routes-set-one"));
 
 //Set server to listen on port
 app.listen(process.env.PORT || 3001, () =>
