@@ -1,0 +1,76 @@
+// Copyright 2015 gRPC authors.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.helloworld";
+option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package bcProtoService;
+
+// The greeting service definition.
+service RetrieveUnsignedProposal {
+  // Sends a greeting
+  rpc RetrieveUnsignedProposal (getProposal) returns (Proposal) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
+
+// The request message containing the user's name.
+message getProposal {
+  string cert = 1;
+  required TransactionProposal transactionProposal = 2;
+}
+
+message TransactionProposal {
+    required string fcn = 1;
+    required Args args = 2;
+    required string chaincodeId = 3;
+    required string channelId = 4;
+}
+
+message Args {
+  required string serialNumber = 1;
+  required string partNumber = 2;
+  required string custodian = 3;
+  required string custodianName = 4;
+  required string geoLocation = 5;
+  required string timestamp = 6;
+}
+
+// The response message containing the greetings
+message Proposal {
+
+    // The header of the proposal. It is the bytes of the Header
+    bytes header = 1;
+
+    // The payload of the proposal as defined by the type in the proposal
+    // header.
+    bytes payload = 2;
+
+    // Optional extensions to the proposal. Its content depends on the Header's
+    // type field.  For the type CHAINCODE, it might be the bytes of a
+    // ChaincodeAction message.
+    bytes extension = 3;
+}
