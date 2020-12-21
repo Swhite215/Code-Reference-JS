@@ -19,5 +19,5 @@ var result = (error, contents) => {
     console.log(contents);
 };
 
-fs.readFile(txtFile, "UTF-8", result);
+//fs.readFile(txtFile, "UTF-8", result);
 fs.readFile(mdFile, "UTF-8", result);
