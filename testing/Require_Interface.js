@@ -28,5 +28,5 @@ testCase('Test Suite', function() {
     assertions('Description', function() {
       // Code
     });
-  });
+  };
 });
