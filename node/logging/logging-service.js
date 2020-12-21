@@ -33,6 +33,7 @@ const logEndpointHit = (httpMethod, endpoint, requestParams, requestBody) => {
     // Catch Error and Continue Executions
   }
 };
+
 // Log the result of an endpoint
 const logEndpointResult = (httpMethod, endpoint, requestParams, requestBody, responseCode, responseBody) => {
   try {
