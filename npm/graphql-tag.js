@@ -7,14 +7,19 @@ updateData(
 )
 }`;
 
-const findData = gql`
+const findDataQuery = gql`
 query ($sampleID: String!) {
     findData(
-        SampleID: $sampleID,
-    )
+        SampleIDFilter: $sampleID,
+    ){
+        SampleID
+        FirstName
+        LastName
+        ScientificName
+    }
 }`
 
 export {
     updateDataMutation,
-    findData
+    findDataQuery
 }
