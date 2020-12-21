@@ -6,7 +6,7 @@
     "configurations": [
         {
             "name": "Launch Program - Server",
-            "program": "${workspaceFolder}/node/servers/jwt.js",
+            "program": "${workspaceFolder}/node/servers/sse/swamp-events/server.js",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"
