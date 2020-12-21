@@ -17,11 +17,11 @@ exec.exec("ls", (err, stdout) => {
 });
 
 //List directories and then logs response - Windows
-exec.exec("dir", (err, stdout) => {
-    if (err) throw err;
+// exec.exec("dir", (err, stdout) => {
+//     if (err) throw err;
 
-    console.log(stdout);
-});
+//     console.log(stdout);
+// });
 
 //Gets Git version and then logs response
 exec.exec("git --version", (err, stdout) => {
