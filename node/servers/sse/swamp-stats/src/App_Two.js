@@ -9,7 +9,7 @@ class App extends React.Component {
       nests: []
     }
 
-    this.eventSource = new EventSource('http://localhost:3000/events');
+    this.eventSource = new EventSource('http://localhost:3333/events');
 
     this.closeConnection = this.closeConnection.bind(this);
   }
@@ -31,6 +31,16 @@ class App extends React.Component {
 
   // Example with multiple events
   componentDidMount() {
+
+    this.eventSource.onmessage = (event) => {
+      console.log(event);
+
+      const parsedData = JSON.parse(event.data);
+
+      let newNests = this.state.nests.concat(parsedData);
+
+      this.setState({nests: newNests})
+    }
 
 
     this.eventSource.addEventListener("addNest", (e) => {
