@@ -37,7 +37,7 @@ Structural Patterns:
     7. Flyweight - Used to reduce the memory and resource usage for complex models containing many hundreds, thousands or hundreds of thousands of similar objects
 
 Behavioral Patterns:
-    1. Chain of Responsibility - Avoid coupling the sender of a request to its receiver by giving more than one object a chance to deal with the request. Chain the receiving objects and pas the request along the chain.
+    1. Chain of Responsibility - Avoid coupling the sender of a request to its receiver by giving more than one object a chance to deal with the request. Chain the receiving objects and pass the request along the chain.
     2. Command - Encapsulate a request as an object, thereby letting you parameterize with different requests, queue or log requests, and support undoable operations.
     3. Iterator - Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
     4. Observer - Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
