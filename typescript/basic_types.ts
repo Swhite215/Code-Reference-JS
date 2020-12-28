@@ -50,3 +50,43 @@ enum ColorSetTwo {
 
 let c2: Color = Color.Red;
 let c3: string = Color[1];
+
+// Unknown
+let notSure: unknown = 4;
+
+// Any
+declare function getValue(key: string): any;
+
+const str: string = getValue("myString");
+
+// Void
+function warnUser(): void {
+    console.log("This is my warning message!");
+}
+
+let unusable: void = undefined;
+unusable = null;
+
+// Never
+function error(message: string): never {
+    throw new Error(message);
+}
+
+function fail() {
+    return error("Something failed!");
+}
+
+// Object - anything that is not a number, string, boolean, bigint, symbol, null, or undefined
+declare function create(o: object | null): void;
+
+create({ prop: 0});
+create(null);
+
+// Type Assertions - As
+let someValue: unknown = "this is a string.";
+let strLength: number = (someValue as string).length;
+
+// Type Assertions - Angle-Bracket
+let otherValue: unknown = "this is a string";
+let strLengthTwo: number = (<string>otherValue).length;
+
