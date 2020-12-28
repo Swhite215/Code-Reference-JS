@@ -1,0 +1,4 @@
+TypeScript Tooling
+
+    1. npm install -g typescript
+    2. TypeScript Visual Studio Plugins
