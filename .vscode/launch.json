@@ -28,6 +28,13 @@
             "name": "Launch Program - TypeScript",
             "program": "${file}",
             "preLaunchTask": "tsc: build - typescript/tsconfig.json",
-          }
+          },
+          {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program - TypeScript Two",
+            "program": "${file}",
+            "preLaunchTask": "tsc: build - tsconfig.json",
+          },
     ]
 }
