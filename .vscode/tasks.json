@@ -14,6 +14,18 @@
           "isDefault": true
         },
         "label": "tsc: build - typescript/tsconfig.json"
+      },
+      {
+        "type": "typescript",
+        "tsconfig": "typescript/node/tsconfig.json",
+        "problemMatcher": [
+          "$tsc"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "label": "tsc: build - tsconfig.json"
       }
     ]
   }
