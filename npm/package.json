@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "ec-key": "^0.0.4",
+    "elliptic": "^6.5.4",
+    "joi": "^17.5.0",
+    "log-update": "^5.0.0",
+    "yargs": "^17.3.1"
+  }
+}
