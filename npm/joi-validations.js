@@ -1,4 +1,4 @@
-const Joi = require("@hapi/joi");
+const Joi = require("joi");
 
 const objectOne = Joi.object().required();
 const objectTwo = Joi.object();

@@ -1,35 +1,22 @@
 //Link: https://www.npmjs.com/package/yargs
 
-const yargs = require('yargs');
+const yargs = require('yargs/yargs')
+const { hideBin } = require('yargs/helpers')
 
-const argv = yargs
-    .command('lyr', 'Tells whether an year is leap year or not', {
-        year: {
-            description: 'the year to check for',
-            alias: 'y',
-            type: 'number',
-        }
-    })
-    .option('time', {
-        alias: 't',
-        description: 'Tell the present Time',
-        type: 'boolean',
-    })
-    .help()
-    .alias('help', 'h')
-    .argv;
-
-if (argv.time) {
-    console.log('The current time is: ', new Date().toLocaleTimeString());
-}
-
-if (argv._.includes('lyr')) {
-    const year = argv.year || new Date().getFullYear();
-    if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
-        console.log(`${year} is a Leap Year`);
-    } else {
-        console.log(`${year} is NOT a Leap Year`);
-    }
-}
-
-console.log(argv);
+yargs(hideBin(process.argv))
+  .command('serve [port]', 'start the server', (yargs) => {
+    return yargs
+      .positional('port', {
+        describe: 'port to bind on',
+        default: 5000
+      })
+  }, (argv) => {
+    if (argv.verbose) console.info(`start server on :${argv.port}`)
+    //serve(argv.port)
+  })
+  .option('verbose', {
+    alias: 'v',
+    type: 'boolean',
+    description: 'Run with verbose logging'
+  })
+  .parse()

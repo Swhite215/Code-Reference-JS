@@ -1,16 +1,17 @@
-const logUpdate = require("log-update");
+import logUpdate from 'log-update';
 
 const frames = ['-', '\\', '|', '/'];
-let i = 0;
- 
+
+let index = 0;
+
 setInterval(() => {
-    const frame = frames[i = ++i % frames.length];
- 
-    logUpdate(
+	const frame = frames[index = ++index % frames.length];
+
+	logUpdate(
 `
         ♥♥
    ${frame} unicorns ${frame}
         ♥♥
 `
-    );
-}, 80)
+	);
+}, 80);

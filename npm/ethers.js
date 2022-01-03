@@ -4,7 +4,6 @@ const contractABI = require("./ERC20_abi.json");
 let rpcEndpoint = "http://domain:port/";
 let contractAddress = "0x20AC05f9A184757DA5440Ff2b528f1Ed18b4822E";
 
-
 async function main() {
     const provider = new ethers.providers.JsonRpcProvider(rpcEndpoint);
 
