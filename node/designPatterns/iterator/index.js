@@ -23,7 +23,6 @@ process.stdin.on("keypress", (str, key) => {
 
     switch (key.name) {
         case "right":
-            console.log(inventory.next());
             inventory.next().writeLn();
             break;
 

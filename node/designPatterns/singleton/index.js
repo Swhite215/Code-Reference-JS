@@ -1,5 +1,6 @@
 var Shopper = require("./Shopper");
 var Store = require("./Store");
+
 /*
 //Singleton Class Solution
 var Logger = require("./Logger");

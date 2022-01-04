@@ -11,7 +11,7 @@ Design Pattern Essentials
 Design Pattern Categories
     1. Creational - Abstract Factory, Builder, Factory Method, Protoype, Singleton
     2. Structural- Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy
-    3. Behavioral - Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Mementor, Observer, State, Strategy, Template Method, Visitor
+    3. Behavioral - Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor
     4. Other - Module, Revealing Module, Revealing Constructor, Callback, Middleware, Reactor, Blockchain, Scheduler, Publisher Subscriber
 
 Anti-Patterns - Bad solutions that cause problems
@@ -23,7 +23,7 @@ Anti-Patterns - Bad solutions that cause problems
 Creational Patterns:
     1. Singleton - Ensure a class only has one instance, and provide a global point of access to it.
     2. Prototype - Instantiates a new object by copying all of the properties of an existing object, creating an independent clone.
-    3. Factory - Define an interface for creating an object, but let subclasses decide which class to instantiate. Lets a class defer instantion to subclasses
+    3. Factory - Define an interface for creating an object, but let subclasses decide which class to instantiate. Lets a class defer instantion to subclasses.
     4. Builder - Separate the construction of a complex object from its representation so that the same construction process can create different representations.
     5. Abstract Factory - Used to provde a client with a set of related or dependant objects. The "family" of objects created by the factory are determined at run-time.
 
@@ -31,7 +31,7 @@ Structural Patterns:
     1. Adapter - Convert the interface of a class into another clients expect. Adapter lets classes work together that couldn't otherwise because of incompatiable interfaces.
     2. Proxy - Provide a surrogate or placeholder for another object to control access to it.
     3. Composite - Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
-    4. Decorator - Attach Additional Responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+    4. Decorator - Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
     5. Bridge - Used to separate the abstract elements of a class from the implementation details, providing the means to replace the implementation details without modifying the abstraction.
     6. Facade - Used to define a simplified interface to a more complex subsystem.
     7. Flyweight - Used to reduce the memory and resource usage for complex models containing many hundreds, thousands or hundreds of thousands of similar objects
