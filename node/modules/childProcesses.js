@@ -10,6 +10,14 @@ exec.exec("start chrome http://www.google.com"); //Open URL in Chrome
 exec.exec("cmd"); //Opens instance of command prompt
 
 //List directories and then logs response - Linux
+exec.exec("df", (err, stdout) => {
+    if (err) throw err;
+
+    console.log(stdout);
+});
+
+
+//List directories and then logs response - Linux
 exec.exec("ls", (err, stdout) => {
     if (err) throw err;
 
