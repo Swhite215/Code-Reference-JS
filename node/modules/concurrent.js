@@ -1,5 +1,5 @@
 //Concurrent Task Queue Execution
-const logUpdate = require("log-update");
+import logUpdate from 'log-update';
 const toX = () => "X";
 
 const delay = seconds =>
